@@ -73,9 +73,15 @@ main {
   flex: 1;
 }
 
-.grid-field {
+.grid-item {
   border: rgb(148, 148, 148) 0.01px dotted;
   flex: 1;
+  cursor: crosshair;
+}
+
+.grid-item:hover {
+  background-color: hsl(0, 0%, 60%);
+  transition: 0.2s;
 }
 
 /* FOOTER */
