@@ -15,11 +15,15 @@
     <main>
       <div class="container">
         <div class="controls">
-          <label for="gridS">Grid size</label>
-          <input id="gridS" type="range" min="10" max="64" value="16" oninput="this.nextElementSibling.value = this.value" title="Grid size" />
-          <output>16</output>
-          <button class="btn change-grid">Change grid</button>
-          <!-- <button>Change grid</button> -->
+          <div class="grid-settings">
+            <label for="gridS">Grid size</label>
+            <input id="gridS" type="range" min="5" max="64" value="16" oninput="this.nextElementSibling.value = this.value" title="Grid size" />
+            <output>16</output>
+            <!-- <button class="btn change-grid">Change grid</button> -->
+          </div>
+          <button class="btn color-btn">Color</button>
+          <button class="btn eraser-btn">Eraser</button>
+          <button class="btn clear-btn">Clear</button>
         </div>
         <div class="canvas"></div>
       </div>

@@ -32,7 +32,7 @@ body {
 }
 
 main {
-  background-color: rgb(207, 207, 207);
+  background-color: #cfcfcf;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -54,10 +54,13 @@ main {
   border-radius: 20px;
   width: 360px;
   height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .canvas {
-  border: black 2px solid;
+  border: #000000 2px solid;
   /* border-radius: 20px; */
   width: 760px;
   height: 90%;
@@ -77,6 +80,8 @@ main {
   border: rgb(148, 148, 148) 0.01px dotted;
   flex: 1;
   cursor: crosshair;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .grid-item:hover {
