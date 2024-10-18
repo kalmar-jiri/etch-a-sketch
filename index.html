@@ -14,7 +14,13 @@
 
     <main>
       <div class="container">
-        <div class="controls"></div>
+        <div class="controls">
+          <label for="gridS">Grid size</label>
+          <input id="gridS" type="range" min="10" max="64" value="16" oninput="this.nextElementSibling.value = this.value" title="Grid size" />
+          <output>16</output>
+          <button class="btn change-grid">Change grid</button>
+          <!-- <button>Change grid</button> -->
+        </div>
         <div class="canvas"></div>
       </div>
     </main>

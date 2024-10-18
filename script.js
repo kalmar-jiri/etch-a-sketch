@@ -3,8 +3,9 @@
 const container = document.querySelector('.container');
 const canvas = document.querySelector('.canvas');
 let squares;
-
-let gridSize = 25;
+const changeGridBtn = document.querySelector('.change-grid');
+const gridSlider = document.querySelector('#gridS');
+let gridSize = 16;
 
 function createGrid(gridSize) {
   for (let col = 1; col <= gridSize; col++) {
@@ -21,13 +22,18 @@ function createGrid(gridSize) {
   }
 
   squares = document.querySelectorAll('.grid-item');
-  console.log(squares);
+
+  squares.forEach(s => {
+    s.addEventListener('mouseenter', () => {
+      s.style.backgroundColor = 'black';
+    });
+  });
 }
 
 createGrid(gridSize);
 
-squares.forEach(s => {
-  s.addEventListener('mouseenter', () => {
-    s.style.backgroundColor = 'black';
-  });
+changeGridBtn.addEventListener('click', () => {
+  canvas.innerHTML = '';
+  gridSize = gridSlider.value;
+  createGrid(gridSize);
 });
