@@ -34,7 +34,7 @@ function createGrid(gridSize) {
 
   squares = document.querySelectorAll('.grid-item');
   squares.forEach(s => {
-    s.addEventListener('mouseover', () => {
+    s.addEventListener('mouseenter', () => {
       if (isMouseDown) s.style.backgroundColor = ink;
     });
   });
